@@ -13,6 +13,7 @@ window.addEventListener("DOMContentLoaded",function() {
 function loop(){
   box.a += box.da;
   box.setAttribute("rotation",{x:0, y:box.a, z:0});
+  //box.setAttribute("position",{x:0,y:box.a, z:0});
   window.requestAnimationFrame(loop);
 }
 
