@@ -5,6 +5,15 @@ window.addEventListener("DOMContentLoaded",function() {
     this.setAttribute("color","blue")
   })
 
+
+
+
+
+
+
+
+
+  
   //Below are different techniques for incorporating the event handler.  Not intended to be demonstrated to students.
   myBox.addEventListener("mouseleave",function(obj){
     console.log(this);
