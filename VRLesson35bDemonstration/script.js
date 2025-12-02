@@ -1,26 +1,22 @@
 let rnd = (l,u) => Math.random() * (u-l) + l
-let scene, camera, target, ball;
-
-window.addEventListener("DOMContentLoaded",function() {
+let scene, camera, cones = [];
+window.onload = function(){
   scene = document.querySelector("a-scene");
   camera = document.querySelector("a-camera");
-  target = document.querySelector("#target");
-  ball = document.querySelector("#ball");
-  ball.x = -1;
-  ball.dx = -0.002;
-  
-  setTimeout(loop,100);
-})
-
-function loop(){
-  
-  ball.x += ball.dx;
-  ball.setAttribute("position",{x:ball.x, y:1, z: 0 });
-  if(distance(ball,target)<1){
-    ball.dx=0;
+  for(let i = 0; i < 10; i++){
+    let x = rnd(-5,5);
+    let z = rnd(-5,5);
+    cones.push(new Cone(x,1,z));
   }
 
-
+  loop();
+}
+function loop(){
+  for(let cone of cones){
+    cone.launch();
+   
+  }
+  
   window.requestAnimationFrame(loop);
 }
 
