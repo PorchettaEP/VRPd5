@@ -12,7 +12,10 @@ class Cone{
     scene.append(this.obj);
   }
   launch(){
-   
+    if(distance(camera ,this.obj )<1){
+      this.fire = true;
+    }
+
     if(this.fire){
       this.y += this.dy;
       this.obj.object3D.position.y = this.y;
