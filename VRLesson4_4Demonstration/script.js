@@ -13,7 +13,7 @@ window.addEventListener("DOMContentLoaded",function() {
     let z = rnd(-10,10);
     balls.push(new Ball(x,z));
   }
-  setTimeout(loop,100);
+  setTimeout(loop,1000);
 })
 
 function loop(){

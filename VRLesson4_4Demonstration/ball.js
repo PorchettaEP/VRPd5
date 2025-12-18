@@ -10,6 +10,7 @@ class Ball{
     this.obj.onclick = ()=>{
       this.start = true;
     }
+    
 
     scene.append(this.obj);
   }
